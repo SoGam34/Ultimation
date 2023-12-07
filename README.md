@@ -35,6 +35,21 @@ Es ist ein schweres Thema versucht euch aber Mühe zu geben und Namen so zu verg
 Das gleiche gilt für Funktions und Methoden Namen. Versuch einfache und sofort versändliche Namen zu vergeben. 
 
 ### Facade Pattern 
-Wenn das System komplexer wird sollte der [Facade-Pattern](https://www.ionos.de/digitalguide/websites/web-entwicklung/was-ist-das-facade-pattern/) zu rate gezogen werden. 
+Bei der Strukturierung und Planung eines neuen Features sollte auf den Einhaltung des [Facade-Pattern](https://www.ionos.de/digitalguide/websites/web-entwicklung/was-ist-das-facade-pattern/) geachtet werden. 
 
+Im Grunde einfache Klassen Interface das man schnell und leicht weiß und sieht was gemacht wird ohne wissen zu müssen wie es funktioniert. Man könnte sag Keep it simple(für den anwender). 
+
+### Tests 
+Wie dir bereits aufgefallen ist gibt es in diesem Repo. Tests. Allgemeine Tests (Super Linter und CodeQL) und (demnächst) selbstgeschriebene Unit Tests. Damit der Code gut getestet werden kann, bin ich dir sehr dankbar wenn du noch auf [Dependency Injektion ](https://www.youtube.com/watch?v=J1f5b4vcxCQ&pp=ygUUZGVwZW5kZW5jeSBpbmplY3Rpb24%3D) achten kannst. ** Persönlich ** finde ich macht es die Verwendung der Klassen auch einfacher, da man zu übersichtlicherem und strukturierteren Code „gezwungen“ wird.
+
+## Personen 
+Bei Fragen oder Problemen findest du für den Entsprechenden Bereich eine Ansprechperson an die du direkt schreiben kannst oder verlinken. 
+
+SoGam34 - Projektleiter und generelle anlaufstelle
+Yantron - Zustandig für das Frontend
+FabianHaag474 - Zustandig für das Backend
+0cin05 - Texte 
+
+## Setup 
+Wie unser Setup aussieht findest du hier, da wir es selber noch nicht wissen sind wir für Vorschlage offen. 
 
