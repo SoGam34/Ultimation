@@ -40,7 +40,7 @@ Bei der Strukturierung und Planung eines neuen Features sollte auf den Einhaltun
 Im Grunde einfache Klassen Interface, die man schnell und leicht weiß und sieht was gemacht wird, ohne wissen zu müssen, wie es funktioniert. Man könnte sagen:"Keep it simple"(für den anwender). 
 
 ### Tests 
-Wie dir bereits aufgefallen ist, gibt es in diesem Repository Tests. Allgemeine Tests (Super Linter und CodeQL) und (demnächst) selbstgeschriebene Unit Tests. Damit der Code gut getestet werden kann, bin ich dir sehr dankbar, wenn du noch auf [Dependency Injektion ](https://www.youtube.com/watch?v=J1f5b4vcxCQ&pp=ygUUZGVwZW5kZW5jeSBpbmplY3Rpb24%3D) achten kannst. ** Persönlich ** finde ich macht es die Verwendung der Klassen auch einfacher, da man zu übersichtlicheren und strukturierteren Code „gezwungen“ wird.
+Wie dir bereits aufgefallen ist, gibt es in diesem Repository Tests. Allgemeine Tests (cmake) und (demnächst) selbstgeschriebene Unit Tests. Damit der Code gut getestet werden kann, bin ich dir sehr dankbar, wenn du noch auf [Dependency Injektion ](https://www.youtube.com/watch?v=J1f5b4vcxCQ&pp=ygUUZGVwZW5kZW5jeSBpbmplY3Rpb24%3D) achten kannst. ** Persönlich ** finde ich macht es die Verwendung der Klassen auch einfacher, da man zu übersichtlicheren und strukturierteren Code „gezwungen“ wird.
 
 ## Personen 
 Bei Fragen oder Problemen findest du für den Entsprechenden Bereich eine Ansprechperson an die du direkt schreiben  oder verlinken kannst. 
