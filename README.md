@@ -42,14 +42,41 @@ Im Grunde einfache Klassen Interface, die man schnell und leicht weiß und sieht
 ### Tests 
 Wie dir bereits aufgefallen ist, gibt es in diesem Repository Tests. Allgemeine Tests (cmake) und (demnächst) selbstgeschriebene Unit Tests. Damit der Code gut getestet werden kann, bin ich dir sehr dankbar, wenn du noch auf [Dependency Injektion ](https://www.youtube.com/watch?v=J1f5b4vcxCQ&pp=ygUUZGVwZW5kZW5jeSBpbmplY3Rpb24%3D) achten kannst. ** Persönlich ** finde ich macht es die Verwendung der Klassen auch einfacher, da man zu übersichtlicheren und strukturierteren Code „gezwungen“ wird.
 
-## Personen 
-Bei Fragen oder Problemen findest du für den Entsprechenden Bereich eine Ansprechperson an die du direkt schreiben  oder verlinken kannst. 
+## (Ansprech-)Personen 
+Bei Fragen oder Problemen findest du für den Entsprechenden Bereich eine Ansprechperson an die du direkt schreiben oder verlinken kannst. 
 
-SoGam34 - Projektleiter und generelle anlaufstelle
-Yantron - Zustandig für das Frontend
-FabianHaag474 - Zustandig für das Backend
-0cin05 - Texte 
+- SoGam34 - Projektleiter und generelle Anlaufstelle
+- Yantron - Zustandig für das Frontend
+- FabianHaag474 - Zustandig für das Backend
+- 0cin05 - Texte 
 
 ## Setup 
-Wie unser Setup aussieht findest du hier, da wir es selber noch nicht wissen, sind wir für Vorschlage offen. 
+Unix Basierte Systeme 
+- Kompiler: g++ Version 11.2
+- Wt instlation
+  - cmake 3.22 und höher
+  - boost v1.78
+  - [Installationsanleitung](https://www.webtoolkit.eu/wt/doc/reference/html/InstallationUnix.html)
+
+Windows 
+- Hier sind die entsprechenden Mitglieder selbst noch am Einrichten 
+
+## Pull Request 
+Damit eine Pull Request gemerged wird mussen einige Voraussetzungen erfüllt sein. Die Vorausetzungen sind:
+- Erfüllung der Grundsätzliche Code-Regeln
+- 3 Reviews
+- Ein Eintrag im Wiki
+
+Sind die drei Vorausetzungen gegeben stehet einem Merge nichts mehr im Weg. Yuhu!!!!
+
+Im folgenden wir auf die einzelnen Vorausetzungen im Deteil eingegangen. 
+
+### Erfüllung der Grundsätzliche Code-Regeln
+Das Ziel der Code-Regeln ist guten und leicht verständlichen, test-und debbugbaren Code zu schaffen. Werden die Regeln nicht eingehalten verstöst der Code wahrscheinlich gegen min. eine der drei Ziele. Der Code ist dann das was zumenidestens hier als "schlechter" Code angesehen wird und "schlechter" Code wird nicht in main landen, damit man selbst und andere eine leichtere Zeit haben. 
+
+### 3 Reviews
+Die Reviews sind dafür da um sicher zu gehen das die Code-Regeln eingehalten werden und das andere Probleme(z. B. Sicherheitslücken oder Schnittstellenkomplikationen mit anderen Klassen) und Bugs möglichst vor dem Merge behoben werden können. Warum 3? Keine Anhung, warum nicht?
+
+### Ein Eintrag im Wiki
+Der Wiki Eintrag soll es leichter machen sich in neu Teile des Programms einzuarbeiten und die Entscheidungen die gefällt wurden nachvollziehbarer zu machen. Bei der Erstellung sollte erst in 2-3 Sätzen kurz 
 
