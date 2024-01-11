@@ -30,8 +30,8 @@ void Tictactoe_field::reset_field() // loops through every bracket of the field 
 
 void Tictactoe_field::init_field() //initializes an empty tictactoe field
 {
-    tictactoe_field.resize(num_col); // set the number of rows
-    for (std::size_t i = 0 ; i < tictactoe_field.size() ; ++i) // set number of colums for each row
+    tictactoe_field.resize(num_col); // set the number of colums
+    for (std::size_t i = 0 ; i < tictactoe_field.size() ; ++i) // set number of rows for each colum
     {
         tictactoe_field[i].resize(num_rows);
     }
