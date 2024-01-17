@@ -5,23 +5,23 @@
 
 class SQLAbfragen
 {
-    std::string to_string(std::vector<std::vector<char>>& Spielfeld, std::string& finaler_string, int zeile, int spalte)
-    {
-        if(Spielfeld.size()-1 == zeile && Spielfeld[zeile].size()-1 == spalte)
+    std::string to_string(std::vector<std::vector<char>>& Spielfeld, std::string& finaler_string, int zeile, int spalte) {// soll das Spielfeld von einem 2-Dimensionalen Vektor in einen std::string nach Schema "fffufffufff" umwandeln. Die Zeitkomplexität ist O(n²).   
+        if(Spielfeld.size()-1 == zeile && Spielfeld[zeile].size()-1 == spalte) // fügt, wenn im letzten feld, dieses an den std::string an und gibt diesen zurück
         {
             finaler_string.push_back(Spielfeld[zeile][spalte]);
             return finaler_string;
         }
 
-        if(Spielfeld[zeile].size()-1 == spalte)
+        if(Spielfeld[zeile].size()-1 == spalte) // wenn eine zeile zuende ist, wird auch ein 'U' an den std::string angehängt, um dies anzuzeigen
         {
-            finaler_string.push_back(Spielfeld[zeile][spalte]);
-            finaler_string.push_back('U');
-            return to_string(Spielfeld, finaler_string, zeile+1, 0);
+            finaler_string.push_back(Spielfeld[zeile][spalte]); // zeichen wird an std::string angehängt
+            finaler_string.push_back('U'); //signalisiert neue Zeile
+            return to_string(Spielfeld, finaler_string, zeile+1, 0); // setzt die Spalte zurück und inkrementiert die Zeile
         }
-
+    else{ // bei felder, welche nicht am Ende der Zeile sind, wird das Element angehängt und die Spalte inkrementiert
         finaler_string.push_back(Spielfeld[zeile][spalte]);
         return to_string(Spielfeld,finaler_string , zeile, spalte+1);
+    }
     }
 
     std::vector<std::vector<char>> to_vector(std::string& Spielfeld, std::vector<std::vector<char>>& finaler_vector, size_t zeile)
