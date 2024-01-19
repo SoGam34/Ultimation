@@ -4,24 +4,29 @@
 #include <string>
 #include <iostream>
 
-
 class Testclass
 {
 private:
     std::vector<std::vector<char>> Spielfeld_vector;
     std::string Spielfeld_string = "0|0|0/0|0|0/0|0|0";
+
     std::vector<std::vector<char>> to_2Dvector (std::vector<std::vector<char>>,std::string,size_t);
 public:
+    Testclass();
     Testclass(std::string);
     ~Testclass();
     std::string to_string(std::vector<std::vector<char>>,std::string);
     std::vector<std::vector<char>> to_2Dvector(std::string);
+    void setSpielfeld_vector(std::vector<std::vector<char>> vector);
     void print_string_field();
     void print_vector_field();
-    void setSpielfeld_vector(std::vector<std::vector<char>> vector);
     std::string getSpielfeld_string();
+    std::vector<std::vector<char>> getSpielfeld_vector();
 };
 
+Testclass::Testclass()
+{
+}
 Testclass::Testclass(std::string Spielfeld)
 {
     this->Spielfeld_string = Spielfeld;
@@ -64,9 +69,10 @@ std::vector<std::vector<char>> Testclass::to_2Dvector(std::vector<std::vector<ch
 
     else if(field_string[0] == '/'){// pop first character and add a new row to the vector and insert the first character
         field_string.erase(0,1);// pops '/'
-        field_vector.push_back({field_string[0]}); //appends character in new row
+        field_vector.push_back({field_string[0]});
+        row++;
         field_string.erase(0,1); // pops the inserted character
-        return to_2Dvector(field_vector,field_string,row++);
+        return to_2Dvector(field_vector,field_string,row);
     }
     else{return {{}};}
 }
@@ -90,4 +96,7 @@ void Testclass::setSpielfeld_vector(std::vector<std::vector<char>> vector){
 }
 std::string Testclass::getSpielfeld_string(){
     return Spielfeld_string;
+}
+std::vector<std::vector<char>> Testclass::getSpielfeld_vector(){
+    return Spielfeld_vector;
 }
