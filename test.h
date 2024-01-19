@@ -54,17 +54,18 @@ std::vector<std::vector<char>> Testclass::to_2Dvector(std::string field_string){
 std::vector<std::vector<char>> Testclass::to_2Dvector(std::vector<std::vector<char>> field_vector, std::string field_string,size_t row = 0){
 
     if(field_string.empty()){return field_vector;}
-    if(field_string.front() == '|'){
+    if(field_string[0] == '|'){
             field_string.erase(0);// pops '|' 
             field_vector[row].push_back(field_string[0]); //adds new character to the current row
             field_string.erase(0); // pops the inserted character
             return to_2Dvector(field_vector,field_string,row); 
     }
 
-        else if(field_string.front() == '/'){// pop first character and add a new row to the vector and insert the first character
+        else if(field_string[0] == '/'){// pop first character and add a new row to the vector and insert the first character
             field_string.erase(0);// pops '/'
             field_vector[row].push_back(field_string[0]); // adds a new  row and fills in the first character 
             field_string.erase(0); // pops the inserted character
+            field_vector.push_back({});
             return to_2Dvector(field_vector,field_string,row++);
     }
 }
