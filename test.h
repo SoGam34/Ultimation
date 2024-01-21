@@ -4,6 +4,10 @@
 #include <string>
 #include <iostream>
 
+bool operator == (Testclass field1,Testclass field2){
+return field1.getSpielfeld_string() == field2.getSpielfeld_string();
+}
+
 class Testclass
 {
 private:
