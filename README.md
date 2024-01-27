@@ -35,18 +35,14 @@ Wie man so was auflöst und weitere Informationen gibt es [hier](https://www.you
 Bitte gebt euch Mühe beim vergeben von Namen und wählt beschreibende Namen. Wenn der Name dadurch länger aber Verständlicher wird ist das in Ordnung(dafür haben wir IDEs). Im folgenden gibt es einige strukturelle Vereinbarungen. Die Vereinbarung helfen vieleicht bei der Namensgebung und sollen vorallem die Leserlichkeit des Codes erhohen. 
 
  - Konstanten 
-    Konstanten werden immer groß geschrieben und einzelen Wörter werden mit _ (Unterstrich) getrennt. ```c++ const int EINE_KONSTANTE; ```
+    werden immer groß geschrieben und einzelen Wörter werden mit _ (Unterstrich) getrennt. ``` const int EINE_KONSTANTE; ```
 
- - Variablen 
-    Grundsätzlich werden Variablen am Anfang klein und in CamelCase geschrieben. ```c++ int eineVariable;  ```
+ - Grundsätzlich werden Variablen am Anfang klein und in CamelCase geschrieben. ``` int eineVariable;  ```
 
  - Klassen
-   - Klassennamen 
-     Klassennamen am Anfang groß schreiben.  ```c++ class EineClasse; ```
-   - Member Variablen 
-     Die Variablen werden am Anfag großgeschrieben, ansonsten wie normale Variablen. ```c++ private: int MemberVariable;  ``` 
-   - Übergabe Parameter
-     Übergabe Parameter verden wie normale Variabelen geschrieben und sollten genauso heißen wie die Member Variable der Sie zu gewiesen wird. 
+   - Klassennamen am Anfang groß schreiben.  ``` class EineClasse; ```
+   - Die Membervariablen werden am Anfag großgeschrieben, ansonsten wie normale Variablen. ``` private: int MemberVariable;  ``` 
+   - Übergabe Parameter verden wie normale Variabelen geschrieben und sollten genauso heißen wie die Member Variable der Sie zu gewiesen werden. 
      ```c++ 
      class TestClasse {
         private: 
@@ -58,13 +54,12 @@ Bitte gebt euch Mühe beim vergeben von Namen und wählt beschreibende Namen. We
           } 
      };
       ```
-   - Methoden 
-     Methoden immer klein Anfangen und danach CamelCase. Bei der Benennung von Funktionen sollte man immer der Strucktur Verb Adjektive und Nomen folgen. Bsp.: processRequest(), selectAllUserData(), getGreenColor(); 
+   - Methoden immer klein Anfangen und danach CamelCase. Bei der Benennung von Funktionen sollte man immer der Strucktur Verb Adjektive und Nomen folgen. Bsp.: processRequest(), selectAllUserData(), getGreenColor(); 
 
  - Prifixe 
-   Bei einer Reference wird immer ein r_ vor die Variable geschrieben. 
-   Bei einem Intellegenten Zeiger ein s_ vor die Variable geschrieben. 
-   Bei einem Rohen Zeiger ein p_ vor die Variable geschrieben. 
+   - Bei einer Reference wird immer ein r_ vor die Variable geschrieben. 
+   - Bei einem Intellegenten Zeiger ein s_ vor die Variable geschrieben. 
+   - Bei einem Rohen Zeiger ein p_ vor die Variable geschrieben. 
    ```c++
       int& r_ichBinEineReference;
       std::unique_ptr<int> s_ichBinEinIntellegenterZeiger{std::make_unique<int>()};
