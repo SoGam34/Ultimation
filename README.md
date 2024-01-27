@@ -30,10 +30,48 @@ Wie man so was auflöst und weitere Informationen gibt es [hier](https://www.you
 ### templates 
 **Verboten** An diesem Projekt arbeiten Personen die C++ lernen auf die man etwas Rücksicht nehmen sollte. Zusätzlich erschweren [templates](https://en.cppreference.com/w/cpp/language/templates) die Nachvollziehbarkeit bei Fehlern und wenn man die Verwendung übertreibt, hat keiner mehr einen Überblick. 
 
-### Namensgebung
-Es ist ein schweres Thema, versucht euch aber Mühe zu geben und Namen so zu vergeben, dass jemand der neu ist sofort weiß, was gemeint ist. [Hilfe?](https://www.youtube.com/watch?v=-J3wNP6u5YU)
-Das Gleiche gilt für Funktionen- und Methodennamen. Versuch einfache und sofort verständliche Namen zu vergeben. 
+### Namens konventionen
 
+Bitte gebt euch Mühe beim vergeben von Namen und wählt beschreibende Namen. Wenn der Name dadurch länger aber Verständlicher wird ist das in Ordnung(dafür haben wir IDEs). Im folgenden gibt es einige strukturelle Vereinbarungen. Die Vereinbarung helfen vieleicht bei der Namensgebung und sollen vorallem die Leserlichkeit des Codes erhohen. 
+
+ - Konstanten 
+    Konstanten werden immer groß geschrieben und einzelen Wörter werden mit _ (Unterstrich) getrennt. ```c++ const int EINE_KONSTANTE; ```
+
+ - Variablen 
+    Grundsätzlich werden Variablen am Anfang klein und in CamelCase geschrieben. ```c++ int eineVariable;  ```
+
+ - Klassen
+   - Klassennamen 
+     Klassennamen am Anfang groß schreiben.  ```c++ class EineClasse; ```
+   - Member Variablen 
+     Die Variablen werden am Anfag großgeschrieben, ansonsten wie normale Variablen. ```c++ private: int MemberVariable;  ``` 
+   - Übergabe Parameter
+     Übergabe Parameter verden wie normale Variabelen geschrieben und sollten genauso heißen wie die Member Variable der Sie zu gewiesen wird. 
+     ```c++ 
+     class TestClasse {
+        private: 
+          int Test;
+        public: 
+          void setTest(int test)
+          {
+            Test = test;
+          } 
+     };
+      ```
+   - Methoden 
+     Methoden immer klein Anfangen und danach CamelCase. Bei der Benennung von Funktionen sollte man immer der Strucktur Verb Adjektive und Nomen folgen. Bsp.: processRequest(), selectAllUserData(), getGreenColor(); 
+
+ - Prifixe 
+   Bei einer Reference wird immer ein r_ vor die Variable geschrieben. 
+   Bei einem Intellegenten Zeiger ein s_ vor die Variable geschrieben. 
+   Bei einem Rohen Zeiger ein p_ vor die Variable geschrieben. 
+   ```c++
+      int& r_ichBinEineReference;
+      std::unique_ptr<int> s_ichBinEinIntellegenterZeiger{std::make_unique<int>()};
+      int* p_ichBinEinRoherZeiger; 
+     ```
+
+     
 ### Facade Pattern 
 Bei der Strukturierung und Planung eines neuen Features sollte auf den Einhaltung des [Facade-Pattern](https://www.ionos.de/digitalguide/websites/web-entwicklung/was-ist-das-facade-pattern/) geachtet werden. 
 
