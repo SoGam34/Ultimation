@@ -6,38 +6,38 @@
 
 class SQLAbfragen
 {
-    std::string Benutzername;
+    std::string PlayerName;
 
-    std::string to_string(std::vector<std::vector<char>>& Spielfeld, std::string& finaler_string, int zeile, int spalte);
+    std::string to_string(std::vector<std::vector<char>>& Field, std::string& final_string, size_t zeile, size_t spalte);
 
-    std::vector<std::vector<char>> to_vector(std::string& Spielfeld, std::vector<std::vector<char>>& finaler_vector, size_t zeile);
+    std::vector<std::vector<char>> to_vector(std::string& Field, std::vector<std::vector<char>>& final_vector, size_t zeile);
 
 public:
-    SQLAbfragen(std::string Benutzername);
+    SQLAbfragen(std::string playerName);
     
-    std::vector<std::vector<char>> getSpielfeld(int ID);
+    std::vector<std::vector<char>> getField(int FieldID);
 
-    void setSpielfeld(int ID, std::vector<std::vector<char>> Spielfeld);
+    void setField(int FieldID, std::vector<std::vector<char>> Field);
 
     std::string getPassword();
 
-    std::vector<std::string> getUserProfil();
+    std::vector<std::string> getPlayerProfile();
 
-    std::string getUserSkin();
+    std::string getPlayerSkin();
 
-    int neuerUser(std::string Passwort);
+    int createNewPlayer(std::string PlayerName, std::string Passwort);
 
-    void loescheUser();
+    void deletePlayer(std::string PlayerName);
 
-    void resetPasswort(std::string neuesPasswort);
+    void resetPasswort(std::string sewPasswort);
 
-    void aktualiesiereUserXP(int draufZuRechnendeXP);
+    void updatePlayerXP(int XPAmountToAdd);
 
     int getXP();
     
-    std::vector<int> getAktuelleSpiele();
+    std::vector<int> getActiveGames();
 
-    std::map<std::string, std::string> getSpielDetails(int SpielID);
+    std::map<std::string, std::string> getGameOverview(int gameID);
 
-    int neuesSpiel(int Spielart, int Schwierigkeitsgrad, std::string Spieler)
+    int createNewGame(int GameTyp, int LevelOfDifficulty, std::string PlayerNames)
 };

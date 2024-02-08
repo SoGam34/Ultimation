@@ -1,27 +1,24 @@
-#include <iostream>
-#include <vector>
 #include <string>
-#include <memory>
-#include <map>
+#include
 
-class SpielTabele
+class GameOverviewTable
 {
-    std::string Benutzername;
+    std::string PlayerName;
 
 public:
-    SpielTabele(std::string Benutzername);
+    GameOverviewTable(std::string PlayerName);
 
-    std::string getAndereSpieler();
+    std::string getOtherPlayerName();
 
-    std::string getSpielfeldID(int SpielID);
+    std::string getFieldID(int gameID);
 
-    std::string getSpielUEbersicht(int SpielID);
+    std::map<std::string, std::string> getGameOverview(int gameID);
 
-    void aktualiesieren(int SpielID, std::vector<std::vector<char>> Spielfeld);
+    void updateMoveCount(int gameID, int moveCount);
 
-    int neuesSpiel(int Spielart, int Schwierigkeitsgrad, std::string Spieler, std::string SpielfeldID);
+    int createNewGame(int GameTyp, int LevelOfDifficulty, std::string PlayerNames, std::string FieldID);
 
-    void deleteSpiel(int SpielID);
+    void deleteGame(int gameID);
 };
 
 
