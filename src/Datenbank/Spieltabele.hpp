@@ -11,17 +11,17 @@ class SpielTabele
 public:
     SpielTabele(std::string Benutzername);
 
-    std::string getSpieler();
+    std::string getAndereSpieler();
 
-    std::string getSpielfeldID();
+    std::string getSpielfeldID(int SpielID);
 
-    std::string getUEbersicht();
+    std::string getSpielUEbersicht(int SpielID);
 
-    void aktualiesieren();
+    void aktualiesieren(int SpielID, std::vector<std::vector<char>> Spielfeld);
 
-    int neuesSpiel();
+    int neuesSpiel(int Spielart, int Schwierigkeitsgrad, std::string Spieler, std::string SpielfeldID);
 
-    void deleteSpiel();
+    void deleteSpiel(int SpielID);
 };
 
 
