@@ -4,7 +4,7 @@
 #include <memory>
 #include <map>
 
-class SQLAbfragen
+class SQLAbfrage
 {
     std::string PlayerName;
 
@@ -13,25 +13,29 @@ class SQLAbfragen
     std::vector<std::vector<char>> to_vector(std::string& Field, std::vector<std::vector<char>>& final_vector, size_t zeile);
 
 public:
-    SQLAbfragen(std::string playerName);
+    SQLAbfrage(std::string playerName);
     
     std::vector<std::vector<char>> getField(int FieldID);
 
     void setField(int FieldID, std::vector<std::vector<char>> Field);
 
-    std::string getPassword();
+    void updateMoveCount(int gameID, int moveCount);
 
-    std::vector<std::string> getPlayerProfile();
+    std::vector<std::string> getOtherPlayerNamesFromGame(int gameID);
+
+    std::map<std::string, std::string> getPlayerProfile();
 
     std::string getPlayerSkin();
 
-    int createNewPlayer(std::string PlayerName, std::string Passwort);
+    int createNewPlayer(std::string playerName, std::string Password);
 
-    void deletePlayer(std::string PlayerName);
+    void deletePlayer(std::string playerName);
 
-    void resetPasswort(std::string sewPasswort);
+    void resetPassword(std::string newPassword);
 
-    void updatePlayerXP(int XPAmountToAdd);
+    std::string getPassword();
+
+    void updateXP(int XPAmountToAdd);
 
     int getXP();
     
@@ -39,5 +43,19 @@ public:
 
     std::map<std::string, std::string> getGameOverview(int gameID);
 
-    int createNewGame(int GameTyp, int LevelOfDifficulty, std::string PlayerNames)
+    int createNewGame(int GameTyp, int LevelOfDifficulty, std::vector<std::string> PlayerNames)
+
+    void deleteGame(int gameID);
+
+    void setGameIDTo(int gameID);
+
+    int getInternalGameID();
+
+    std::map<std::string, std::string> getGameOverview();
+
+    std::vector<std::string> getOtherPlayerNamesFromGame();
+
+    void updateMoveCount(int moveCount);
+
+    void deleteGame();
 };
