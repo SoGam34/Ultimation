@@ -1,7 +1,5 @@
-#include <iostream>
 #include <vector>
 #include <string>
-#include <memory>
 #include <map>
 
 class PlayerTable
@@ -21,7 +19,7 @@ public:
 
     int getID();
 
-    int createNewPlayer(std::string Password);
+    int createNewPlayer(std::string PlayerName, std::string Password);
 
     void deletePlayer();
 

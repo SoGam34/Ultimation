@@ -4,8 +4,16 @@
 #include <memory>
 #include <map>
 
+#include "PlayerTable.hpp"
+#include "GameOverviewTable.hpp"
+#include "FieldTable.hpp"
+
 class SQLAbfrage
 {
+    std::unique_ptr<PlayerTable> Player;
+    std::unique_ptr<GameOverviewTable> GameInfo;
+    std::unique_ptr<FieldTable> GameField;
+
     std::string PlayerName;
 
     std::string to_string(std::vector<std::vector<char>>& Field, std::string& final_string, size_t zeile, size_t spalte);
