@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 #include <string>
 #include <memory>
@@ -16,6 +15,8 @@ class SQLAbfrage
 
     std::string PlayerName;
 
+    int GameID;
+
     std::string to_string(std::vector<std::vector<char>>& Field, std::string& final_string, size_t zeile, size_t spalte);
 
     std::vector<std::vector<char>> to_vector(std::string& Field, std::vector<std::vector<char>>& final_vector, size_t zeile);
@@ -27,13 +28,13 @@ public:
 
     void setField(int FieldID, std::vector<std::vector<char>> Field);
 
-    void updateMoveCount(int gameID, int moveCount);
+    void updateMoveCount(int gameID);
 
     std::vector<std::string> getOtherPlayerNamesFromGame(int gameID);
 
-    std::map<std::string, std::string> getPlayerProfile();
+    std::map<std::string, int> getPlayerProfile();
 
-    std::string getPlayerSkin();
+    int getPlayerSkin();
 
     int createNewPlayer(std::string playerName, std::string Password);
 
@@ -51,7 +52,7 @@ public:
 
     std::map<std::string, std::string> getGameOverview(int gameID);
 
-    int createNewGame(int GameTyp, int LevelOfDifficulty, std::vector<std::string> PlayerNames)
+    int createNewGame(int GameTyp, int LevelOfDifficulty, std::vector<std::string> PlayerNames);
 
     void deleteGame(int gameID);
 
@@ -63,7 +64,7 @@ public:
 
     std::vector<std::string> getOtherPlayerNamesFromGame();
 
-    void updateMoveCount(int moveCount);
+    void updateMoveCount();
 
     void deleteGame();
 };

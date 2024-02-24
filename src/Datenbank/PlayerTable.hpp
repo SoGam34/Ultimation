@@ -23,5 +23,5 @@ public:
 
     void deletePlayer();
 
-    std::string getSkin();
+    int getSkin();
 };

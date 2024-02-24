@@ -15,9 +15,9 @@ public:
 
     std::map<std::string, std::string> getGameOverview(int gameID);
 
-    void updateMoveCount(int gameID, int moveCount);
+    void updateMoveCount(int gameID);
 
-    int createNewGame(int GameTyp, int LevelOfDifficulty, std::vector<std::string> PlayerNames, std::string FieldID);
+    int createNewGame(int GameTyp, int LevelOfDifficulty, std::vector<std::string> PlayerNames, int  FieldID);
 
     void deleteGame(int gameID);
 };

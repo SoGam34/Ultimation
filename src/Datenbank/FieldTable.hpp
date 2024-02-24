@@ -2,17 +2,17 @@
 
 class FieldTable
 {
-    int FieldID;
 
 public:
-    FieldTable(int FieldID);
 
-    std::string getField();
+    FieldTable();
 
-    void setField(std::string Field);
+    std::string getField(int FieldID);
+
+    void setField(std::string Field, int FieldID);
 
     int createNewField(std::string Field);
 
-    void deleteField();
+    void deleteField(int FieldID);
 };
 
